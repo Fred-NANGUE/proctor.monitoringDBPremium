@@ -1,0 +1,74 @@
+.vboxCentral{
+    -fx-padding: 20;
+    -fx-background-color: #F4F6F9;
+}
+.titreCentral{
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #0D1B2A;
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-letter-spacing: 1px;
+}
+.addUser{
+    -fx-background-color: transparent;
+    -fx-text-fill: #27AE60;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 8 20 8 20;
+    -fx-background-radius: 6;
+    -fx-border-color: #27AE60;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 6;
+}
+.addUser:hover{
+    -fx-background-color: #27AE60;
+    -fx-text-fill: white;
+}
+.modifyUser{
+    -fx-background-color: transparent;
+    -fx-text-fill: #3498DB;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 8 20 8 20;
+    -fx-background-radius: 6;
+    -fx-border-color: #3498DB;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 6;
+}
+.modifyUser:hover{
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+}
+.deleteUser{
+    -fx-background-color: transparent;
+    -fx-text-fill: #E74C3C;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 8 20 8 20;
+    -fx-background-radius: 6;
+    -fx-border-color: #E74C3C;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 6;
+}
+.deleteUser:hover{
+    -fx-background-color: #E74C3C;
+    -fx-text-fill: white;
+}
+.totalUser{
+    -fx-text-fill: #0D1B2A;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+.totalStandarduser{
+    -fx-text-fill: #3498DB;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
+.totalSuperUser{
+    -fx-text-fill: #D4AF37;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}

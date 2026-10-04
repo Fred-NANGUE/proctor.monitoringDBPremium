@@ -1,0 +1,62 @@
+.vbo-xCentral1{
+    -fx-padding: 10;
+}
+.hbox1{
+    -fx-padding: 0 0 10 0;
+}
+.vboxStat{
+    -fx-background-color: white;
+    -fx-border-color: rgba(212, 175, 55, 0.25);
+    -fx-border-width: 1;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.08), 12, 0, 0, 4);
+    -fx-cursor: hand;
+}
+.vboxStat:hover {
+    -fx-border-color: #D4AF37;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.2), 15, 0, 0, 6);
+}
+.labelStat_capacite{
+    -fx-font-size: 34px;
+    -fx-font-weight: 300;
+    -fx-text-fill: #0D1B2A;
+    -fx-font-family: "Segoe UI", "Roboto Light", sans-serif;
+    -fx-font-family: "Segoe UI", "Roboto Light", sans-serif;
+}
+.labelStat_libelle{
+    -fx-font-size: 11px;
+    -fx-text-fill: #8898AA;
+    -fx-font-weight: 600;
+    -fx-letter-spacing: 0.5px;
+    -fx-text-transform: uppercase;
+}
+.LineChart_tableauDeBord{
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 10, 0, 0, 3);
+    -fx-padding: 10;
+}
+.chart-series-line {
+    -fx-stroke: #D4AF37;
+    -fx-stroke-width: 2.5px;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.3), 4, 0, 0, 0);
+}
+.labelStockDisk{
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0D1B2A;
+}
+.hboxDisk{
+    -fx-background-color: white;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 10, 0, 0, 2);
+}
+.progressBarDisk{
+    -fx-background-radius: 4;
+    -fx-background-color: #F4F6F9;
+}

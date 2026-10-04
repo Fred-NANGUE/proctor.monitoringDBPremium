@@ -1,0 +1,53 @@
+.vboxCentral{
+    -fx-padding: 20;
+    -fx-background-color: #F4F6F9;
+}
+.titreCentral{
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #0D1B2A;
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-letter-spacing: 1px;
+}
+.zoneRequete{
+    -fx-background-color: white;
+    -fx-border-color: #D4AF37;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-family: 'Courier New';
+    -fx-font-size: 13px;
+    -fx-padding: 10;
+}
+.buttonExecuter{
+    -fx-background-color: #0D1B2A;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 8 25 8 25;
+    -fx-background-radius: 5;
+}
+.buttoneffacer{
+    -fx-background-color: #7A8A9A;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 8 25 8 25;
+    -fx-background-radius: 5;
+}
+.buttonexporter{
+    -fx-background-color: #0D1B2A;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 8 25 8 25;
+    -fx-background-radius: 5;
+}
+.zoneResultat{
+    -fx-border-color: #D4AF37;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-padding: 5;
+}

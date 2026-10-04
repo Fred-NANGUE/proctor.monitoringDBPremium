@@ -1,0 +1,108 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 20 juil. 2026, 13:12:35
+    Author     : Fredos
+*/
+/* dialog-style.css */
+.dialog-custom {
+    -fx-background-color: #0a1a2e;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.dialog-custom .header-panel {
+    -fx-background-color: #0a1a2e;
+    -fx-text-fill: #D4AF37;
+}
+
+.dialog-custom .header-panel .label {
+    -fx-text-fill: #D4AF37;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.dialog-custom .content {
+    -fx-background-color: #0a1a2e;
+}
+
+.dialog-custom .button {
+    -fx-background-color: #D4AF37;
+    -fx-text-fill: #0a1a2e;
+    -fx-font-weight: bold;
+    -fx-padding: 8 20 8 20;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.dialog-custom .button:cancel {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+}
+
+.dialog-custom .button:hover {
+    -fx-background-color: #f1c40f;
+    -fx-cursor: hand;
+}
+
+.dialog-custom .label {
+    -fx-text-fill: #ecf0f1;
+}
+
+.dialog-custom .text-field,
+.dialog-custom .password-field,
+.dialog-custom .text-area,
+.dialog-custom .combo-box {
+    -fx-background-color: #1a2a3e;
+    -fx-text-fill: #ecf0f1;
+    -fx-border-color: #D4AF37;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.dialog-custom .check-box {
+    -fx-text-fill: #ecf0f1;
+}
+
+.dialog-custom .titled-pane {
+    -fx-text-fill: #D4AF37;
+    -fx-background-color: #0a1a2e;
+}
+
+.dialog-custom .titled-pane > .title {
+    -fx-background-color: #0a1a2e;
+    -fx-text-fill: #D4AF37;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.dialog-custom .titled-pane > .title .text {
+    -fx-fill: #D4AF37;
+    -fx-font-weight: bold;
+}
+
+.dialog-custom .titled-pane > .content {
+    -fx-background-color: #0a1a2e;
+}
+
+.dialog-custom .scroll-pane {
+    -fx-background: transparent;
+    -fx-background-color: transparent;
+}
+
+.dialog-custom .scroll-pane .viewport {
+    -fx-background-color: transparent;
+}
+
+.dialog-custom .scroll-bar {
+    -fx-background-color: #1a2a3e;
+}
+
+.dialog-custom .scroll-bar .thumb {
+    -fx-background-color: #D4AF37;
+    -fx-background-radius: 10px;
+}

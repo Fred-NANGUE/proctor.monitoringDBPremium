@@ -1,0 +1,1259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1320.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.monitoringdb.SecondaryController">
+    <children>
+        <AnchorPane>
+            <children>
+                <BorderPane layoutX="-7.0" layoutY="-77.0" prefHeight="650.0" prefWidth="1320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <left>
+                        <VBox prefHeight="200.0" prefWidth="180.0" spacing="5.0" styleClass="menu-pane" stylesheets="@styleDashboard.css">
+                            <children>
+                                <Label alignment="CENTER" stylesheets="@styleDashboard.css" text="MENU">
+                                    <VBox.margin>
+                                        <Insets left="45.0" />
+                                    </VBox.margin>
+                                    <styleClass>
+                                        <String fx:value="menuLeft" />
+                                        <String fx:value="menu-title" />
+                                    </styleClass>
+                                </Label>
+                                <Button fx:id="btn_dashboard" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="menu-btn-primary" stylesheets="@styleDashboard.css" text="TABLEAU DE BORD" wrapText="true">
+                                    <graphic>
+                                        <FontIcon fill="WHITE" iconLiteral="fas-chart-pie" iconSize="16">
+                                            <HBox.margin>
+                                                <Insets />
+                                            </HBox.margin>
+                                        </FontIcon>
+                                    </graphic>
+                                </Button>
+                                <Accordion>
+                                    <panes>
+                                        <TitledPane animated="false" expanded="false" maxWidth="1.7976931348623157E308" prefHeight="154.0" prefWidth="150.0" stylesheets="@styleDashboard.css" text="SUPERVISIONS">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <VBox maxWidth="1.7976931348623157E308" prefHeight="114.0" prefWidth="159.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <Button fx:id="btn_graphic" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="submenu-btn" stylesheets="@styleDashboard.css" text="Graphiques" wrapText="true">
+                                                                    <graphic>
+                                                                        <FontIcon fill="#a0b4c8" iconLiteral="fas-chart-line" iconSize="14" />
+                                                                    </graphic>
+                                                                </Button>
+                                                                <Button fx:id="btn_console" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="submenu-btn" stylesheets="@styleDashboard.css" text="Console SQL" wrapText="true">
+                                                                    <graphic>
+                                                                        <FontIcon fill="#a0b4c8" iconLiteral="fas-terminal" iconSize="14" />
+                                                                    </graphic>
+                                                                </Button>
+                                                                <Button fx:id="btn_session" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="submenu-btn" stylesheets="@styleDashboard.css" text="Sessions" wrapText="true">
+                                                                    <graphic>
+                                                                        <FontIcon fill="#a0b4c8" iconLiteral="fas-users" iconSize="14" />
+                                                                    </graphic>
+                                                                </Button>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                            <styleClass>
+                                                <String fx:value="menu-category" />
+                                                <String fx:value="menu-category-supervision" />
+                                            </styleClass>
+                                            <graphic>
+                                                <FontIcon fill="#3498db" iconLiteral="fas-chart-line" iconSize="16" />
+                                            </graphic>
+                                        </TitledPane>
+                                        <TitledPane animated="false" expanded="false" prefHeight="153.0" prefWidth="150.0" stylesheets="@styleDashboard.css" text="SECURITE">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <VBox layoutX="24.0" layoutY="-15.0" prefHeight="169.0" prefWidth="148.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <Button fx:id="btn_alert" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="submenu-btn" stylesheets="@styleDashboard.css" text="Alertes">
+                                                                    <graphic>
+                                                                        <FontIcon fill="#a0b4c8" iconLiteral="fas-exclamation-triangle" iconSize="14" />
+                                                                    </graphic>
+                                                                </Button>
+                                                                <Button fx:id="btn_logs" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="submenu-btn" stylesheets="@styleDashboard.css" text="Logs">
+                                                                    <graphic>
+                                                                        <FontIcon fill="#a0b4c8" iconLiteral="fas-file-alt" iconSize="14" />
+                                                                    </graphic>
+                                                                </Button>
+                                                                <Button fx:id="btn_audit" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="submenu-btn" stylesheets="@styleDashboard.css" text="Audit">
+                                                                    <graphic>
+                                                                        <FontIcon fill="#a0b4c8" iconLiteral="fas-clipboard-list" iconSize="14" />
+                                                                    </graphic>
+                                                                </Button>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                            <styleClass>
+                                                <String fx:value="menu-category" />
+                                                <String fx:value="menu-category-securite" />
+                                            </styleClass>
+                                            <graphic>
+                                                <FontIcon fill="#e74c3c" iconLiteral="fas-shield-alt" iconSize="16" />
+                                            </graphic>
+                                        </TitledPane>
+                                        <TitledPane animated="false" expanded="false" prefHeight="165.0" prefWidth="150.0" stylesheets="@styleDashboard.css" text="ADMINISTRATION">
+                                            <content>
+                                                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                    <children>
+                                                        <VBox layoutX="34.0" layoutY="-20.0" prefHeight="180.0" prefWidth="148.0" spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                            <children>
+                                                                <Button fx:id="btn_parametre" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="submenu-btn" stylesheets="@styleDashboard.css" text="Parametres">
+                                                                    <graphic>
+                                                                        <FontIcon fill="#a0b4c8" iconLiteral="fas-cog" iconSize="14" />
+                                                                    </graphic>
+                                                                </Button>
+                                                                <Button fx:id="btn_utilisateur" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="submenu-btn" stylesheets="@styleDashboard.css" text="Utilisateurs">
+                                                                    <graphic>
+                                                                        <FontIcon fill="#a0b4c8" iconLiteral="fas-user-cog" />
+                                                                    </graphic>
+                                                                </Button>
+                                                                <Button fx:id="btn_rapport" maxWidth="1.7976931348623157E308" mnemonicParsing="false" styleClass="submenu-btn" stylesheets="@styleDashboard.css" text="Rapports">
+                                                                    <graphic>
+                                                                        <FontIcon fill="#a0b4c8" iconLiteral="fas-print" iconSize="14" />
+                                                                    </graphic>
+                                                                </Button>
+                                                            </children>
+                                                        </VBox>
+                                                    </children>
+                                                </AnchorPane>
+                                            </content>
+                                            <styleClass>
+                                                <String fx:value="menu-category" />
+                                                <String fx:value="menu-category-administration" />
+                                            </styleClass>
+                                            <graphic>
+                                                <FontIcon fill="#27ae60" iconLiteral="fas-cogs" iconSize="16" />
+                                            </graphic>
+                                        </TitledPane>
+                                    </panes>
+                                </Accordion>
+                            </children>
+                        </VBox>
+                    </left>
+                    <center>
+                        <StackPane fx:id="centerBorderPane" styleClass="fondCenter" stylesheets="@styleDashboard.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane fx:id="dashboard_page">
+                                    <children>
+                                        <ScrollPane fitToWidth="true" layoutY="14.0" prefHeight="510.0" prefWidth="801.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                                <VBox alignment="TOP_CENTER" spacing="20.0" styleClass="vboxCentral1" stylesheets="@styleDashboard.css">
+                                                    <children>
+                                                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="455.0" styleClass="labelStockDisk" stylesheets="@page-dashboard.css" text="Courbe d'evolution de tendances">
+                                                            <graphic>
+                                                                <FontIcon iconLiteral="fas-chart-pie" iconSize="14" />
+                                                            </graphic>
+                                                            <font>
+                                                                <Font size="21.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <GridPane alignment="CENTER" prefHeight="449.0" prefWidth="797.0" vgap="2.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <LineChart fx:id="sessionsLineChart" animated="false" createSymbols="false" legendVisible="false" prefHeight="150.0" prefWidth="350.0" styleClass="LineChart_tableauDeBord" stylesheets="@styleDashboard.css" title="SESSIONS" GridPane.columnIndex="1">
+                                                                    <xAxis>
+                                                                        <CategoryAxis side="BOTTOM" />
+                                                                    </xAxis>
+                                                                    <yAxis>
+                                                                        <NumberAxis side="LEFT" />
+                                                                    </yAxis>
+                                                                </LineChart>
+                                                                <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                    <children>
+                                                                        <ComboBox fx:id="quelTypeDeDonneePourLesRequetesBox" prefWidth="340.0" promptText="Type de tendance des Requetes" styleClass="vboxStat" stylesheets="@page-dashboard.css" />
+                                                                        <LineChart fx:id="queriesLineChart" animated="false" createSymbols="false" legendVisible="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" styleClass="LineChart_tableauDeBord" stylesheets="@styleDashboard.css">
+                                                                            <xAxis>
+                                                                                <CategoryAxis side="BOTTOM" />
+                                                                            </xAxis>
+                                                                            <yAxis>
+                                                                                <NumberAxis side="LEFT" />
+                                                                            </yAxis>
+                                                                        </LineChart>
+                                                                    </children>
+                                                                </VBox>
+                                                                <AreaChart fx:id="cpuAreaChart" title="CPU">
+                                                                    <xAxis>
+                                                                        <CategoryAxis side="BOTTOM" />
+                                                                    </xAxis>
+                                                                    <yAxis>
+                                                                        <NumberAxis side="LEFT" />
+                                                                    </yAxis>
+                                                                </AreaChart>
+                                                                <AreaChart fx:id="ramAreaChart" title="RAM" GridPane.rowIndex="1">
+                                                                    <xAxis>
+                                                                        <CategoryAxis side="BOTTOM" />
+                                                                    </xAxis>
+                                                                    <yAxis>
+                                                                        <NumberAxis side="LEFT" />
+                                                                    </yAxis>
+                                                                </AreaChart>
+                                                            </children>
+                                                        </GridPane>
+                                                    </children>
+                                                </VBox>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="graphic_page" visible="false">
+                                    <children>
+                                        <ScrollPane prefHeight="510.0" prefWidth="801.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                                <VBox alignment="CENTER" spacing="15.0" styleClass="vboxCentral" stylesheets="@page-charts.css">
+                                                    <children>
+                                                        <Label styleClass="titreCentral" stylesheets="@page-charts.css" text="GRAPHIQUES AVANCÉS" />
+                        
+                                                        <HBox alignment="CENTER" prefHeight="51.0" prefWidth="980.0">
+                                                            <children>
+                                                                <Button fx:id="refreshChartsButton" alignment="CENTER" mnemonicParsing="false" styleClass="buttonRefrech" stylesheets="@page-charts.css" text="RAFRAÎCHIR TOUT">
+                                                                    <graphic>
+                                                                        <FontIcon iconLiteral="fas-sync-alt" iconSize="14" />
+                                                                    </graphic>
+                                                                </Button>
+                                                            </children>
+                                                        </HBox>
+
+                                                        <!-- ============================================================ -->
+                                                        <!-- SECTION CDB & PDB                                              -->
+                                                        <!-- ============================================================ -->
+                                                        <TitledPane animated="false" prefWidth="1050.0" styleClass="titledPane" stylesheets="@page-charts.css" text="CDB &amp; PDB">
+                                                            <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                                    <children>
+                                                                        <VBox prefHeight="300.0" prefWidth="978.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                            <children>
+                                                                                <!-- Infos CDB/PDB -->
+                                                                                <HBox alignment="TOP_CENTER" spacing="30.0">
+                                                                                    <children>
+                                                                                        <Label fx:id="cdbNameLabel" styleClass="txtLabelCDB_PDB" stylesheets="@page-charts.css" text="CDB : Chargement..." />
+                                                                                        <Label fx:id="pdbCountLabel" styleClass="txtLabelCDB_PDB" stylesheets="@page-charts.css" text="PDB : Chargement..." />
+                                                                                        <Label fx:id="totalSizeLabel" styleClass="txtLabelCDB_PDB" stylesheets="@page-charts.css" text="Total Size : Chargement..." />
+                                                                                    </children>
+                                                                                    <padding>
+                                                                                        <Insets bottom="5.0" top="5.0" />
+                                                                                    </padding>
+                                                                                </HBox>
+                                                
+                                                                                <!-- Graphiques CDB/PDB -->
+                                                                                <HBox prefHeight="200.0" spacing="10.0">
+                                                                                    <children>
+                                                                                        <BarChart fx:id="pdbSizeChart" prefHeight="200.0" prefWidth="480.0" styleClass="barChart" stylesheets="@page-charts.css" title="Taille des PDB">
+                                                                                            <xAxis>
+                                                                                                <CategoryAxis side="BOTTOM" />
+                                                                                            </xAxis>
+                                                                                            <yAxis>
+                                                                                                <NumberAxis label="Taille (GB)" side="LEFT" />
+                                                                                            </yAxis>
+                                                                                        </BarChart>
+                                                                                        <BarChart fx:id="pdbSessionsChart" prefHeight="200.0" prefWidth="480.0" styleClass="barChart" stylesheets="@page-charts.css" title="Sessions par PDB">
+                                                                                            <xAxis>
+                                                                                                <CategoryAxis side="BOTTOM" />
+                                                                                            </xAxis>
+                                                                                            <yAxis>
+                                                                                                <NumberAxis label="Sessions" side="LEFT" />
+                                                                                            </yAxis>
+                                                                                        </BarChart>
+                                                                                    </children>
+                                                                                    <VBox.margin>
+                                                                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                                                                    </VBox.margin>
+                                                                                </HBox>
+                                                                            </children>
+                                                                        </VBox>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                            </content>
+                                                        </TitledPane>
+
+                                                        <!-- ============================================================ -->
+                                                        <!-- SECTION SGA & PGA                                            -->
+                                                        <!-- ============================================================ -->
+                                                        <TitledPane animated="false" prefWidth="1050.0" styleClass="titledPane" stylesheets="@page-charts.css" text="SGA &amp; PGA">
+                                                            <content>
+                                                                <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                                    <children>
+                                                                        <HBox prefHeight="280.0" prefWidth="978.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                            <children>
+                                                                                <!-- SGA -->
+                                                                                <VBox prefWidth="474.0">
+                                                                                    <children>
+                                                                                        <Label fx:id="sgaTitleLabel" styleClass="txtLabelSGA_PGA" stylesheets="@page-charts.css" text="SGA (System Global Area)">
+                                                                                            <padding>
+                                                                                                <Insets left="5.0" />
+                                                                                            </padding>
+                                                                                        </Label>
+                                                                                        <PieChart fx:id="sgaPieChart" prefHeight="150.0" prefWidth="474.0" styleClass="pieChart" stylesheets="@page-charts.css" title="SGA" />
+                                                                                        <GridPane fx:id="sgaGrid" hgap="15.0" prefWidth="474.0" styleClass="gridPane" stylesheets="@page-charts.css" vgap="6.0">
+                                                                                            <columnConstraints>
+                                                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                                                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                                                                                            </columnConstraints>
+                                                                                            <rowConstraints>
+                                                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                            </rowConstraints>
+                                                                                            <children>
+                                                                                                <Label text="Total SGA" />
+                                                                                                <Label text="Buffer Cache" GridPane.rowIndex="1" />
+                                                                                                <Label text="Shared Pool" GridPane.rowIndex="2" />
+                                                                                                <Label text="Redo Log Buffer" GridPane.rowIndex="3" />
+                                                                                                <Label fx:id="sgaTotalLabel" GridPane.columnIndex="1" />
+                                                                                                <Label fx:id="sgaBufferLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                                                <Label fx:id="sgaSharedLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                                                <Label fx:id="sgaRedoLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                                            </children>
+                                                                                            <VBox.margin>
+                                                                                                <Insets bottom="5.0" top="5.0" />
+                                                                                            </VBox.margin>
+                                                                                        </GridPane>
+                                                                                    </children>
+                                                                                    <HBox.margin>
+                                                                                        <Insets bottom="5.0" top="5.0" />
+                                                                                    </HBox.margin>
+                                                                                </VBox>
+
+                                                                                <!-- PGA -->
+                                                                                <VBox prefWidth="474.0">
+                                                                                    <children>
+                                                                                        <Label fx:id="pgaTitleLabel" styleClass="txtLabelSGA_PGA" stylesheets="@page-charts.css" text="PGA (Program Global Area)">
+                                                                                            <padding>
+                                                                                                <Insets left="5.0" />
+                                                                                            </padding>
+                                                                                        </Label>
+                                                                                        <PieChart fx:id="pgaPieChart" prefHeight="150.0" prefWidth="474.0" styleClass="pieChart" stylesheets="@page-charts.css" title="PGA" />
+                                                                                        <GridPane fx:id="pgaGrid" hgap="15.0" prefWidth="474.0" styleClass="gridPane" stylesheets="@page-charts.css" vgap="6.0">
+                                                                                            <columnConstraints>
+                                                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                                                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="150.0" />
+                                                                                            </columnConstraints>
+                                                                                            <rowConstraints>
+                                                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                                            </rowConstraints>
+                                                                                            <children>
+                                                                                                <Label text="Total PGA" />
+                                                                                                <Label text="PGA utilisée" GridPane.rowIndex="1" />
+                                                                                                <Label text="Hit Ratio" GridPane.rowIndex="2" />
+                                                                                                <Label fx:id="pgaTotalLabel" GridPane.columnIndex="1" />
+                                                                                                <Label fx:id="pgaUsedLabel" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                                                <Label fx:id="pgaHitLabel" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                                            </children>
+                                                                                            <VBox.margin>
+                                                                                                <Insets bottom="5.0" top="5.0" />
+                                                                                            </VBox.margin>
+                                                                                        </GridPane>
+                                                                                    </children>
+                                                                                    <HBox.margin>
+                                                                                        <Insets bottom="5.0" top="5.0" />
+                                                                                    </HBox.margin>
+                                                                                </VBox>
+                                                                            </children>
+                                                                        </HBox>
+                                                                    </children>
+                                                                </AnchorPane>
+                                                            </content>
+                                                        </TitledPane>
+                                                    </children>
+                                                </VBox>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="session_page" visible="false">
+                                    <children>
+                                        <VBox alignment="TOP_CENTER" layoutX="261.0" layoutY="106.0" prefHeight="510.0" prefWidth="799.0" spacing="15.0" styleClass="vboxCentral" stylesheets="@page-sessions.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Label styleClass="titreCentral" stylesheets="@page-sessions.css" text="SESSION ACTIVE" />
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                                    <children>
+                                                        <Label fx:id="totalSessionsLabel" styleClass="totalsessions" stylesheets="@page-sessions.css" text="Total : 0" />
+                                                        <Label fx:id="activeSessionsLabel" styleClass="totalActif" stylesheets="@page-sessions.css" text="Actives : 0" />
+                                                        <Label fx:id="inactiveSessionsLabel" styleClass="totalInactif" stylesheets="@page-sessions.css" text="Inactives : 0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                    <children>
+                                                        <Button fx:id="refreshSessions_button" mnemonicParsing="false" styleClass="buttonRafaichir" stylesheets="@page-sessions.css" text="RAFRAICHIR">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-sync-alt" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="exportSessions_button" mnemonicParsing="false" styleClass="buttonExporter" stylesheets="@page-sessions.css" text="EXPORTER">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-file-export" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="viewPositionButton" mnemonicParsing="false" styleClass="buttonPosition" stylesheets="@page-sessions.css" text="📍 VOIR POSITION" visible="false" managed="false">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-map-marker-alt" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                                <TableView fx:id="sessionsTableView" prefHeight="300.0" prefWidth="200.0" styleClass="tableView" stylesheets="@page-sessions.css">
+                                                    <columns>
+                                                        <TableColumn prefWidth="52.0" text="SID" />
+                                                        <TableColumn prefWidth="71.0" text="SERIAL#" />
+                                                        <TableColumn prefWidth="95.0" text="USERNAME" />
+                                                        <TableColumn prefWidth="88.0" text="STATUS" />
+                                                        <TableColumn prefWidth="64.0" text="MACHINE" />
+                                                        <TableColumn prefWidth="100.0" text="PROGRAM" />
+                                                        <TableColumn prefWidth="100.0" text="LOGON TIME" />
+                                                        <TableColumn prefWidth="50.0" text="SQL_ID" />
+                                                    </columns>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="alert_page" visible="false">
+                                    <children>
+                                        <VBox alignment="TOP_CENTER" layoutX="156.0" layoutY="56.0" prefHeight="510.0" prefWidth="799.0" spacing="15.0" styleClass="vboxCentral" stylesheets="@page-alerts.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Label styleClass="titreCentral" stylesheets="@page-alerts.css" text="ALERTE" />
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                                    <children>
+                                                        <Label fx:id="criticalAlertLabel" styleClass="totalCritiques" stylesheets="@page-alerts.css" text="Critiques : 0" />
+                                                        <Label fx:id="warningAlertLabel" styleClass="totalAvertissements" stylesheets="@page-alerts.css" text="Avertissements : 0" />
+                                                        <Label fx:id="infoAlertLabel" styleClass="totalInfo" stylesheets="@page-alerts.css" text="Info : 0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                    <children>
+                                                        <Button fx:id="refreshAlert_button" mnemonicParsing="false" styleClass="buttonRafraichir" stylesheets="@page-alerts.css" text="RAFRAICHIER">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-sync-alt" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="exportAlert_button" mnemonicParsing="false" styleClass="buttonExporter" stylesheets="@page-alerts.css" text="EXPORTER">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-file-export" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="markAllRead_button" mnemonicParsing="false" styleClass="buttonExporter" stylesheets="@page-alerts.css" text="AFFICHER TOUT" />
+                                                    </children>
+                                                </HBox>
+                                                <ListView fx:id="alertListView" prefHeight="300.0" prefWidth="200.0" styleClass="listeView" stylesheets="@page-alerts.css" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="console_page" visible="false">
+                                    <children>
+                                        <VBox alignment="TOP_CENTER" prefHeight="510.0" prefWidth="799.0" spacing="15.0" styleClass="vboxCentral" stylesheets="@page-sql.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Label styleClass="titreCentral" stylesheets="@page-sql.css" text="CONSOLE SQL" />
+                                                <TextArea fx:id="sqlZoneTextArea" prefHeight="150.0" prefWidth="200.0" styleClass="zoneRequete" stylesheets="@page-sql.css" />
+                                                <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="642.0" spacing="10.0">
+                                                    <children>
+                                                        <Button fx:id="startQuery_button" mnemonicParsing="false" styleClass="buttonExecuter" stylesheets="@page-sql.css" text="EXECUTER">
+                                                            <graphic>
+                                                                <FontIcon fx:id="execute_stopQueryIcon" fill="#d4af37" iconLiteral="fas-play" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="cleanQuery_button" mnemonicParsing="false" styleClass="buttoneffacer" stylesheets="@page-sql.css" text="EFFACER">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-trash" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="exportQuery_button" mnemonicParsing="false" styleClass="buttonexporter" stylesheets="@page-sql.css" text="EXPORTER">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-file-export" />
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                                <TableView fx:id="resultatQueries" prefHeight="238.0" prefWidth="761.0" styleClass="zoneResultat" stylesheets="@page-sql.css" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="log_page" visible="false">
+                                    <children>
+                                        <VBox alignment="TOP_CENTER" layoutX="283.0" layoutY="114.0" prefHeight="510.0" prefWidth="799.0" spacing="12.0" styleClass="vboxCentral" stylesheets="@page-logs.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Label styleClass="titreCentral" stylesheets="@page-logs.css" text="LOGS SYSTEME &amp; BASE" />
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+                                                    <children>
+                                                        <Label fx:id="totalLogsLabel" styleClass="totalLogs" stylesheets="@page-logs.css" text="Total : 0" />
+                                                        <Label fx:id="errorLogsLabel" styleClass="erreurLogs" stylesheets="@page-logs.css" text="Erreurs :" />
+                                                        <Label fx:id="warningLogsLabel" styleClass="avertissementsLogs" stylesheets="@page-logs.css" text="Avertissements :" />
+                                                        <Label fx:id="infoLogsLabel" text="Infos : 0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                                    <children>
+                                                        <Label styleClass="textFilter" stylesheets="@page-logs.css" text="Niveau :" />
+                                                        <ComboBox fx:id="logLevelFilter" prefHeight="25.0" prefWidth="157.0" />
+                                                        <Label styleClass="textFilter" stylesheets="@page-logs.css" text="Source :" />
+                                                        <ComboBox fx:id="logSourceFilter" prefWidth="120.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                                    <children>
+                                                        <Label text="Du :" />
+                                                        <DatePicker fx:id="logStartDate" prefHeight="25.0" prefWidth="161.0" />
+                                                        <Label text="Au :" />
+                                                        <DatePicker fx:id="logEndDate" />
+                                                        <Button fx:id="filterLogButton" mnemonicParsing="false" styleClass="textFilter" stylesheets="@page-logs.css" text="FILTRER">
+                                                            <graphic>
+                                                                <FontIcon iconLiteral="fas-search" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                    <children>
+                                                        <Button fx:id="refreshLogButton" mnemonicParsing="false" styleClass="buttonRafraichir" stylesheets="@page-logs.css" text="RAFRAICHIER">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-sync-alt" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="exportLogButton" mnemonicParsing="false" styleClass="buttonExporter" stylesheets="@page-logs.css" text="EXPORTER">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-file-export" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                                <TableView fx:id="logTableView" styleClass="tableView" stylesheets="@page-logs.css" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="audit_page" visible="false">
+                                    <children>
+                                        <VBox alignment="TOP_CENTER" prefHeight="510.0" prefWidth="799.0" spacing="12.0" styleClass="vboxCentral" stylesheets="@page-audit.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Label styleClass="titreCentral" stylesheets="@page-audit.css" text="JOURNAL D'AUDIT" />
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="25.0">
+                                                    <children>
+                                                        <Label fx:id="totalAuditLabel" styleClass="totalAudit" stylesheets="@page-audit.css" text="Total : 0" />
+                                                        <Label fx:id="failedAuditLabel" styleClass="totalEchouee" stylesheets="@page-audit.css" text="Connexions échouées : 0" />
+                                                        <Label fx:id="successAuditLabel" styleClass="totalAutorise" stylesheets="@page-audit.css" text="Accès autorisés : 0" />
+                                                    </children>
+                                                </HBox>
+                                                <VBox alignment="CENTER_LEFT">
+                                                    <children>
+                                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                            <children>
+                                                                <Label style="-fx-font-weight: bold;" text="Action : " />
+                                                                <ComboBox fx:id="auditActionBoxFilter" prefWidth="172.0" />
+                                                                <Label style="-fx-font-weight: bold;" text="Utilisateur :" />
+                                                                <ComboBox fx:id="auditUserBoxFilter" prefWidth="172.0" />
+                                                            </children>
+                                                        </HBox>
+                                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                            <children>
+                                                                <Label style="-fx-font-weight: bold;" text="Du :" />
+                                                                <DatePicker fx:id="auditStartDate" prefHeight="25.0" prefWidth="172.0" />
+                                                                <Label style="-fx-font-weight: bold;" text="Au :" />
+                                                                <DatePicker fx:id="auditEndDate" prefWidth="172.0" />
+                                                                <Button fx:id="filterAudit_button" mnemonicParsing="false" styleClass="textFilter" stylesheets="@page-audit.css" text="FILTRER">
+                                                                    <graphic>
+                                                                        <FontIcon iconLiteral="fas-search" iconSize="14" />
+                                                                    </graphic>
+                                                                </Button>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </VBox>
+                                                <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                    <children>
+                                                        <Button fx:id="refreshAudit_button" mnemonicParsing="false" styleClass="buttonRafraichir" stylesheets="@page-audit.css" text="RAFRAICHIER">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-sync-alt" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="exportAudit_button" mnemonicParsing="false" styleClass="buttonExporter" stylesheets="@page-audit.css" text="EXPORTER">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-file-export" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                                <TableView fx:id="auditTableView" styleClass="tableView" stylesheets="@page-audit.css">
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="parametre_page" visible="false">
+                                    <children>
+                                        <ScrollPane prefHeight="510.0" prefWidth="801.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                                <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="509.0" prefWidth="784.0" spacing="15.0" styleClass="vboxCentral" stylesheets="@page-settings.css">
+                                                    <children>
+                                                        <!-- Titre -->
+                                                        <Label styleClass="titreCentral" stylesheets="@page-settings.css" text="PARAMÈTRES DE L'APPLICATION" />
+      
+                                                        <!-- ============================================ -->
+                                                        <!-- SECTION 1 : PERSONNALISATION (Thème + Langue)-->
+                                                        <!-- ============================================ -->
+                                                        <TitledPane animated="false" collapsible="false" styleClass="sectionTitledPane" text="🌓 PERSONNALISATION">
+                                                            <content>
+                                                                <HBox alignment="CENTER" prefHeight="80.0" prefWidth="800.0" spacing="60.0">
+                                                                    <children>
+                                                                        <VBox alignment="CENTER" spacing="8.0">
+                                                                            <Label styleClass="labelSection" text="Thème" />
+                                                                            <ComboBox fx:id="themeComboBox" prefWidth="180.0" styleClass="comboModern" />
+                                                                        </VBox>
+                                                                        <VBox alignment="CENTER" spacing="8.0">
+                                                                            <Label styleClass="labelSection" text="Langue" />
+                                                                            <ComboBox fx:id="languageComboBox" prefWidth="180.0" styleClass="comboModern" />
+                                                                        </VBox>
+                                                                        <Separator orientation="VERTICAL" prefHeight="50.0" />
+                                                                        <VBox alignment="CENTER_LEFT" spacing="5.0">
+                                                                            <Label styleClass="labelInfo" text="💡 Les changements sont appliqués immédiatement" />
+                                                                            <Label styleClass="labelInfoSmall" text="et sauvegardés automatiquement" />
+                                                                        </VBox>
+                                                                    </children>
+                                                                </HBox>
+                                                            </content>
+                                                        </TitledPane>
+      
+                                                        <!-- ============================================ -->
+                                                        <!-- SECTION 2 : COLLECTE                         -->
+                                                        <!-- ============================================ -->
+                                                        <TitledPane animated="false" collapsible="false" styleClass="sectionTitledPane" text="📊 COLLECTE DES MÉTRIQUES">
+                                                            <content>
+                                                                <GridPane alignment="CENTER" hgap="30.0" prefWidth="780.0" styleClass="gridPaneModern" vgap="10.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <Label styleClass="labelColModern" text="Intervalle de collecte :" />
+                                                                        <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                                            <TextField fx:id="intervalSettingField" prefWidth="120.0" styleClass="textFieldModern" />
+                                                                            <Label styleClass="labelUnit" text="secondes" />
+                                                                        </HBox>
+                                                                        <Label styleClass="labelInfoSmall" text="(5 - 300 secondes)" GridPane.columnIndex="2" />
+      
+                                                                        <Label styleClass="labelColModern" text="Rafraîchissement graphiques :" GridPane.rowIndex="1" />
+                                                                        <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                            <TextField fx:id="chartsIntervalField" prefWidth="120.0" styleClass="textFieldModern" text="5" />
+                                                                            <Label styleClass="labelUnit" text="secondes" />
+                                                                        </HBox>
+                                                                        <Label styleClass="labelInfoSmall" text="(1 - 60 secondes)" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                                                    </children>
+                                                                </GridPane>
+                                                            </content>
+                                                        </TitledPane>
+      
+                                                        <!-- ============================================ -->
+                                                        <!-- SECTION 3 : SEUILS D'ALERTE                  -->
+                                                        <!-- ============================================ -->
+                                                        <TitledPane animated="false" collapsible="false" styleClass="sectionTitledPane" text="🎯 SEUILS D'ALERTE">
+                                                            <content>
+                                                                <GridPane alignment="CENTER" hgap="30.0" prefWidth="780.0" styleClass="gridPaneModern" vgap="10.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <Label styleClass="labelColModern" text="CPU :" />
+                                                                        <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                                            <TextField fx:id="cpuThresholdSettingField" prefWidth="120.0" styleClass="textFieldModern" />
+                                                                            <!--  <Label styleClass="labelUnit" text="%" /> -->
+                                                                        </HBox>
+                                                                        <Label styleClass="labelInfoSmall" text="(10 - 100 %)" GridPane.columnIndex="2" />
+      
+                                                                        <Label styleClass="labelColModern" text="RAM :" GridPane.rowIndex="1" />
+                                                                        <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                            <TextField fx:id="ramThresholdSettingField" prefWidth="120.0" styleClass="textFieldModern" />
+                                                                            <!--  <Label styleClass="labelUnit" text="%" /> -->
+                                                                        </HBox>
+                                                                        <Label styleClass="labelInfoSmall" text="(10 - 100 %)" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      
+                                                                        <Label styleClass="labelColModern" text="Disque :" GridPane.rowIndex="2" />
+                                                                        <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                                            <TextField fx:id="diskThresholdSettingField" prefWidth="120.0" styleClass="textFieldModern" />
+                                                                            <!--  <Label styleClass="labelUnit" text="%" /> -->
+                                                                        </HBox>
+                                                                        <Label styleClass="labelInfoSmall" text="(10 - 100 %)" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      
+                                                                        <Label styleClass="labelColModern" text="Tablespace :" GridPane.rowIndex="3" />
+                                                                        <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                                            <TextField fx:id="tablespaceThresholdSettingField" prefWidth="120.0" styleClass="textFieldModern" />
+                                                                            <!--  <Label styleClass="labelUnit" text="%" /> -->
+                                                                        </HBox>
+                                                                        <Label styleClass="labelInfoSmall" text="(10 - 100 %)" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                                                    </children>
+                                                                </GridPane>
+                                                            </content>
+                                                        </TitledPane>
+      
+                                                        <!-- ============================================ -->
+                                                        <!-- SECTION 4 : NOTIFICATIONS                    -->
+                                                        <!-- ============================================ -->
+                                                        <TitledPane animated="false" collapsible="false" styleClass="sectionTitledPane" text="🔔 NOTIFICATIONS">
+                                                            <content>
+                                                                <GridPane alignment="CENTER" hgap="30.0" prefWidth="780.0" styleClass="gridPaneModern" vgap="10.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <Label styleClass="labelColModern" text="Alertes sonores :" />
+                                                                        <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                                            <CheckBox fx:id="soundAlertCheckBox" styleClass="checkboxModern" text="Activer" />
+                                                                        </HBox>
+                                                                        <Label styleClass="labelInfoSmall" text="Bip à chaque alerte" GridPane.columnIndex="2" />
+      
+                                                                        <Label styleClass="labelColModern" text="Notifications système :" GridPane.rowIndex="1" />
+                                                                        <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                                            <CheckBox fx:id="systemNotificationCheckBox" styleClass="checkboxModern" text="Activer" />
+                                                                        </HBox>
+                                                                        <Label styleClass="labelInfoSmall" text="Pop-up système" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+      
+                                                                        <Label styleClass="labelColModern" text="Notifications email :" GridPane.rowIndex="2" />
+                                                                        <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                                            <CheckBox fx:id="emailNotificationCheckBox" styleClass="checkboxModern" text="Activer" />
+                                                                        </HBox>
+                                                                        <Label styleClass="labelInfoSmall" text="Envoi automatique" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                                                    </children>
+                                                                </GridPane>
+                                                            </content>
+                                                        </TitledPane>
+      
+                                                        <!-- ============================================ -->
+                                                        <!-- SECTION 5 : EMAIL                            -->
+                                                        <!-- ============================================ -->
+                                                        <TitledPane animated="false" collapsible="false" styleClass="sectionTitledPane" text="📧 CONFIGURATION EMAIL">
+                                                            <content>
+                                                                <GridPane alignment="CENTER" hgap="30.0" prefWidth="780.0" styleClass="gridPaneModern" vgap="10.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="450.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <Label styleClass="labelColModern" text="Destinataires :" />
+                                                                        <TextArea fx:id="add_emailRecepteurs" prefHeight="70.0" prefWidth="400.0" promptText="admin@monitoring.com dba@monitoring.com" styleClass="textAreaModern" wrapText="true" GridPane.columnIndex="1" />
+                                                                        <Label styleClass="labelInfoSmall" text="Séparés par un espace" GridPane.columnIndex="2" />
+      
+                                                                        <Label styleClass="labelColModern" text="Programmation :" GridPane.rowIndex="2" />
+                                                                        <HBox alignment="CENTER_LEFT" spacing="15.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                                            <children>
+                                                                                <ComboBox fx:id="emailDayComboBox" prefWidth="150.0" styleClass="comboModern" />
+                                                                                <Label styleClass="labelUnit" text="à" />
+                                                                                <ComboBox fx:id="emailHourComboBox" prefWidth="100.0" styleClass="comboModern" />
+                                                                            </children>
+                                                                        </HBox>
+                                                                        <HBox alignment="CENTER_LEFT" spacing="15.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="2">
+                                                                            <Label styleClass="labelUnit" text="EMAIL" />
+                                                                            <Button fx:id="sendEmailNowButton" mnemonicParsing="false" styleClass="buttonEmailPremium" text="ENVOYER MAINTENANT" />
+                                                                        </HBox>
+                                                                    </children>
+                                                                </GridPane>
+                                                            </content>
+                                                        </TitledPane>
+      
+                                                        <!-- ============================================ -->
+                                                        <!-- SECTION 6 : SÉCURITÉ                         -->
+                                                        <!-- ============================================ -->
+                                                        <TitledPane animated="false" collapsible="false" styleClass="sectionTitledPane" text="🔐 SÉCURITÉ">
+                                                            <content>
+                                                                <GridPane alignment="CENTER" hgap="30.0" prefWidth="780.0" styleClass="gridPaneModern" vgap="10.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="250.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <Label styleClass="labelColModern" text="Timeout de session :" />
+                                                                        <HBox alignment="CENTER_LEFT" spacing="10.0" GridPane.columnIndex="1">
+                                                                            <TextField fx:id="sessionTimeoutField" prefWidth="120.0" styleClass="textFieldModern" text="30" />
+                                                                            <Label styleClass="labelUnit" text="minutes" />
+                                                                        </HBox>
+                                                                        <Label styleClass="labelInfoSmall" text="(5 - 120 minutes)" GridPane.columnIndex="2" />
+                                                                    </children>
+                                                                </GridPane>
+                                                            </content>
+                                                        </TitledPane>
+      
+                                                        <!-- ============================================ -->
+                                                        <!-- BOUTONS ET STATUT                            -->
+                                                        <!-- ============================================ -->
+                                                        <HBox alignment="CENTER" spacing="30.0">
+                                                            <children>
+                                                                <Button fx:id="saveSettings_button" mnemonicParsing="false" styleClass="buttonSavePremium" text="ENREGISTRER" />
+                                                                <Button fx:id="resetSettings_button" mnemonicParsing="false" styleClass="buttonResetPremium" text="RÉINITIALISER" />                                          
+                                                            </children>
+                                                        </HBox>
+      
+                                                        <Label fx:id="statusParamLabel" styleClass="labelMessage" stylesheets="@page-settings.css" />
+                                                    </children>
+                                                </VBox>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="utilisateur_page" visible="false">
+                                    <children>
+                                        <VBox alignment="TOP_CENTER" prefHeight="510.0" prefWidth="799.0" spacing="15.0" styleClass="vboxCentral" stylesheets="@page-users.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <children>
+                                                <Label styleClass="titreCentral" stylesheets="@page-users.css" text="GESTION DES UTILISATEURS" />
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                    <children>
+                                                        <Button fx:id="addUserOracleButton" mnemonicParsing="false" styleClass="addUser" stylesheets="@page-users.css" text="AJOUTER">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-user-plus" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="editUserOracleButton" mnemonicParsing="false" styleClass="modifyUser" stylesheets="@page-users.css" text="MODIFIER">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-user-edit" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="deleteUserOracleButton" mnemonicParsing="false" styleClass="deleteUser" stylesheets="@page-users.css" text="SUPPRIMER">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-user-minus" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="refreshUsersOracleButton" mnemonicParsing="false" styleClass="addUser" stylesheets="@page-users.css" text="RAFRAICHIR">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-sync-alt" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                        <Button fx:id="exportUsersOracleButton" mnemonicParsing="false" styleClass="addUser" stylesheets="@page-users.css" text="EXPORTER">
+                                                            <graphic>
+                                                                <FontIcon fill="#d4af37" iconLiteral="fas-file-export" iconSize="14" />
+                                                            </graphic>
+                                                        </Button>
+                                                    </children>
+                                                </HBox>
+                                                <TableView fx:id="usersOracleTableView" styleClass="tableView" stylesheets="@page-users.css">
+                                                    <columns>
+                                                        <TableColumn prefWidth="75.0" text="ID" />
+                                                        <TableColumn prefWidth="135.0" text="NOM UTILISATEUR" />
+                                                        <TableColumn prefWidth="129.0" text="ROLE" />
+                                                        <TableColumn prefWidth="133.0" text="EMAIL" />
+                                                        <TableColumn prefWidth="167.0" text="DERNIER CONNEXION" />
+                                                    </columns>
+                                                    <columnResizePolicy>
+                                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                                    </columnResizePolicy>
+                                                </TableView>
+                                                <HBox alignment="CENTER" prefHeight="45.0" prefWidth="759.0" spacing="30.0">
+                                                    <children>
+                                                        <Label fx:id="totalUsersLabel" styleClass="totalUser" stylesheets="@page-users.css" text="Total Utilisateur: 0" />
+                                                        <Label fx:id="totalUsersStandardLabel" styleClass="totalStandarduser" stylesheets="@page-users.css" text="Total Utilisateurs Standard : 0" />
+                                                        <Label fx:id="totalUsersSuperLabel" styleClass="totalSuperUser" stylesheets="@page-users.css" text="Total Super Utilisateurs : 0" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane fx:id="rapport_page" visible="false">
+                                    <children>
+                                        <ScrollPane prefHeight="510.0" prefWidth="801.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                            <content>
+                                                <VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="509.0" prefWidth="784.0" spacing="20.0" styleClass="vboxCentral" stylesheets="@page-reports.css">
+                                                    <children>
+                                                        <Label styleClass="titreCentral" stylesheets="@page-reports.css" text="GÉNÉRATION DE RAPPORTS" />
+                                                        <Label fx:id="reportStatusLabel" />
+                                                        <GridPane alignment="CENTER" hgap="20.0" minHeight="-Infinity" styleClass="gridPane" stylesheets="@page-reports.css" vgap="18.0">
+                                                            <columnConstraints>
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                            </columnConstraints>
+                                                            <rowConstraints>
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                            </rowConstraints>
+                                                            <children>
+                                                                <Label styleClass="labelCol0" stylesheets="@page-reports.css" text="Type de rapport :" />
+                                                                <Label styleClass="labelCol0" stylesheets="@page-reports.css" text="Période du :" GridPane.rowIndex="1" />
+                                                                <Label styleClass="labelCol0" stylesheets="@page-reports.css" text="Période au :" GridPane.rowIndex="2" />
+                                                                <Label styleClass="labelCol0" stylesheets="@page-reports.css" text="Format :" GridPane.rowIndex="3" />
+                                                                <Button fx:id="generateReportButton" mnemonicParsing="false" styleClass="buttonGenerer" stylesheets="@page-reports.css" text="GENERER" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4">
+                                                                    <GridPane.margin>
+                                                                        <Insets top="15.0" />
+                                                                    </GridPane.margin>
+                                                                    <graphic>
+                                                                        <FontIcon fill="#d4af37" iconLiteral="fas-file" iconSize="14" />
+                                                                    </graphic>
+                                                                </Button>
+                                                                <ComboBox fx:id="reportTypeComboBox" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="300.0" styleClass="textfieldCol1" stylesheets="@page-reports.css" GridPane.columnIndex="1" />
+                                                                <ComboBox fx:id="reportFormatComboBox" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="300.0" styleClass="textfieldCol1" stylesheets="@page-reports.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                <DatePicker fx:id="reportStartDate" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="300.0" styleClass="textfieldCol1" stylesheets="@page-reports.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                <DatePicker fx:id="reportEndDate" maxWidth="1.7976931348623157E308" prefHeight="35.0" prefWidth="300.0" styleClass="textfieldCol1" stylesheets="@page-reports.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                            </children>
+                                                        </GridPane>
+                                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
+                                                            <children>
+                                                                <Button fx:id="downloadReportButton" mnemonicParsing="false" styleClass="buttonGenerer" stylesheets="@page-reports.css" text="TELECHARGER">
+                                                                    <graphic>
+                                                                        <FontIcon fill="#d4af37" iconLiteral="fas-download" iconSize="14" />
+                                                                    </graphic>
+                                                                </Button>
+                                                                <Button fx:id="deleteReportButton" mnemonicParsing="false" styleClass="buttonGenerer" stylesheets="@page-reports.css" text="SUPPRIMER">
+                                                                    <graphic>
+                                                                        <FontIcon fill="#d4af37" iconLiteral="fas-trash-alt" />
+                                                                    </graphic>
+                                                                </Button>
+                                                                <ProgressBar fx:id="progressReportIndicator" prefWidth="200.0" progress="0.0" />
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets />
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                        <TableView fx:id="reportsTableView" minHeight="-Infinity" styleClass="tableView" stylesheets="@page-reports.css">
+                                                            <columns>
+                                                                <TableColumn prefWidth="75.0" text="DATE" />
+                                                                <TableColumn prefWidth="75.0" text="TYPE" />
+                                                                <TableColumn prefWidth="75.0" text="PERIODE" />
+                                                                <TableColumn prefWidth="75.0" text="FORMAT" />
+                                                                <TableColumn prefWidth="75.0" text="STATUT" />
+                                                            </columns>
+                                                        </TableView>
+                                                        <TextArea fx:id="reportPreviewArea" editable="false" minHeight="-Infinity" prefHeight="200.0" prefWidth="200.0" wrapText="true" />
+                                                    </children>
+                                                </VBox>
+                                            </content>
+                                        </ScrollPane>
+                                    </children>
+                                </AnchorPane>
+                                <FontIcon fill="#d4af37" iconLiteral="fas-database" iconSize="300" mouseTransparent="true" opacity="0.2" />
+                                <Button fx:id="cacheRightBorderPane" alignment="TOP_RIGHT" mnemonicParsing="false" onAction="#Cache_DeployRight" styleClass="styleCahceDeployRight" stylesheets="@styleDashboard.css" StackPane.alignment="TOP_RIGHT">
+                                    <graphic>
+                                        <FontIcon fx:id="cacheRightIconBorderPane" iconLiteral="fas-minus">
+                                            <cursor>
+                                                <Cursor fx:constant="DEFAULT" />
+                                            </cursor>
+                                        </FontIcon>
+                                    </graphic>
+                                    <StackPane.margin>
+                                        <Insets right="-15.0" top="-15.0" />
+                                    </StackPane.margin>
+                                </Button>
+                            </children>
+                        </StackPane>
+                    </center>
+                    <top>
+                        <HBox prefHeight="70.0" styleClass="fondTop" stylesheets="@styleDashboard.css" BorderPane.alignment="CENTER_LEFT">
+                            <children>
+                                <HBox alignment="BOTTOM_LEFT" prefHeight="70.0" prefWidth="297.0" spacing="10.0">
+                                    <children>
+                                        <FontIcon fill="#d4af37" iconLiteral="fas-database" iconSize="32">
+                                            <HBox.margin>
+                                                <Insets bottom="5.0" left="15.0" />
+                                            </HBox.margin>
+                                        </FontIcon>
+                                        <VBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="310.0">
+                                            <children>
+                                                <Label styleClass="txt1Top" stylesheets="@styleDashboard.css" text="MONITORING DB PREMIUM" />
+                                                <Label styleClass="txt2Top" stylesheets="@styleDashboard.css" text="Oracle 19c - Supervision" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </HBox>
+                                <Region prefHeight="40.0" prefWidth="554.0" />
+                                <HBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="414.0" spacing="20.0">
+                                    <children>
+                                        <VBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="163.0">
+                                            <children>
+                                                <Label fx:id="heureInterface" styleClass="heureTop" stylesheets="@styleDashboard.css" text="00:00:00" />
+                                                <Label fx:id="dateInterface" styleClass="dateTop" stylesheets="@styleDashboard.css" text="01/01/2026" />
+                                            </children>
+                                        </VBox>
+                                        <StackPane prefHeight="40.0" prefWidth="131.0">
+                                            <children>
+                                                <Button fx:id="btnNotification" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" styleClass="buttoncloche" stylesheets="@styleDashboard.css">
+                                                    <graphic>
+                                                        <FontIcon fill="#d4af37" iconLiteral="fas-bell" iconSize="20" />
+                                                    </graphic>
+                                                </Button>
+                                                <Label fx:id="nbreNotification" styleClass="labelClocheButton" stylesheets="@styleDashboard.css" text="0" />
+                                            </children>
+                                        </StackPane>
+                                        <Button fx:id="btnDeconnectInterface" mnemonicParsing="false" onAction="#DeconnexionCentral" prefHeight="33.0" prefWidth="166.0" styleClass="buttonTop" stylesheets="@styleDashboard.css" text="DECONNEXION" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </HBox>
+                    </top>
+                    <bottom>
+                        <HBox alignment="CENTER" prefHeight="30.0" prefWidth="1200.0" spacing="30.0" styleClass="Bottom" stylesheets="@styleDashboard.css" BorderPane.alignment="CENTER">
+                            <children>
+                                <ScrollPane prefHeight="36.0" prefWidth="1640.0" vbarPolicy="NEVER">
+                                    <content>
+                                        <HBox alignment="CENTER" prefHeight="32.0" spacing="8.0" style="-fx-background-color: #f3f3f3; -fx-border-color: #cccccc; -fx-border-width: 1 0 0 0;">
+                                            <children>
+                                                <Label fx:id="hostLabelBottom" text="N/A">
+                                                    <graphic>
+                                                        <FontIcon iconColor="#d35400" iconLiteral="fas-server" iconSize="14" />
+                                                    </graphic>
+                                                </Label>
+                                                <Separator orientation="VERTICAL" />
+                                                <HBox alignment="CENTER_LEFT" spacing="5.0">
+                                                    <children>
+                                                        <Label fx:id="cpuLabelBottom" text="N/A">
+                                                            <graphic>
+                                                                <FontIcon iconColor="#27ae60" iconLiteral="fas-microchip" iconSize="14" />
+                                                            </graphic>
+                                                        </Label>
+                                                    </children>
+                                                </HBox>
+                                                <Pane fx:id="cpuChartContainer" prefHeight="25.0" prefWidth="67.0" />
+                                                <Separator orientation="VERTICAL" />
+                                                <Label fx:id="ramLabelBottom" text="0/0">
+                                                    <graphic>
+                                                        <FontIcon iconColor="#27ae60" iconLiteral="fas-memory" iconSize="14" />
+                                                    </graphic>
+                                                </Label>
+                                                <Separator orientation="VERTICAL" />
+                                                <Label fx:id="uploadLabelBottom" text="N/A">
+                                                    <graphic>
+                                                        <FontIcon iconColor="#2980b9" iconLiteral="fas-arrow-up" iconSize="13" />
+                                                    </graphic>
+                                                </Label>
+                                                <Label fx:id="downloadLabelBottom" text="N/A">
+                                                    <graphic>
+                                                        <FontIcon iconColor="#27ae60" iconLiteral="fas-arrow-down" iconSize="13" />
+                                                    </graphic>
+                                                </Label>
+                                                <Separator orientation="VERTICAL" />
+                                                <Label fx:id="uptimeLabelBottom" text="N/A">
+                                                    <graphic>
+                                                        <FontIcon iconColor="#7f8c8d" iconLiteral="fas-clock" iconSize="14" />
+                                                    </graphic>
+                                                </Label>
+                                                <Separator orientation="VERTICAL" />
+                                                <Label fx:id="userLabelBottom" text="N/A">
+                                                    <graphic>
+                                                        <FontIcon iconColor="#34495e" iconLiteral="fas-user" iconSize="14" />
+                                                    </graphic>
+                                                </Label>
+                                                <Separator orientation="VERTICAL" />
+                                                <Label fx:id="diskLabelBottom" prefHeight="17.0" text="N/A">
+                                                    <graphic>
+                                                        <FontIcon iconColor="#16a085" iconLiteral="fas-hdd" iconSize="14" />
+                                                    </graphic>
+                                                </Label>
+                                                <Separator orientation="VERTICAL" />
+                                                <HBox HBox.hgrow="ALWAYS" />
+                                                <Button fx:id="closeButtonBottom" mnemonicParsing="false" style="-fx-background-color: transparent; -fx-padding: 2;">
+                                                    <graphic>
+                                                        <FontIcon iconColor="#c0392b" iconLiteral="fas-times-circle" iconSize="16" />
+                                                    </graphic>
+                                                </Button>
+                                            </children>
+                                            <padding>
+                                                <Insets bottom="3.0" left="10.0" right="5.0" top="3.0" />
+                                            </padding>
+                                        </HBox>
+                                    </content>
+                                </ScrollPane>
+                            </children>
+                        </HBox>
+                    </bottom>
+                    <right>
+                        <SplitPane fx:id="RightBorderPane" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" BorderPane.alignment="CENTER">
+                            <items>
+                                <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" spacing="10.0" styleClass="fondRight" stylesheets="@styleDashboard.css">
+                                    <children>
+                                        <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="260.0" prefWidth="269.0" styleClass="fondRight1" stylesheets="@styleDashboard.css" text="ENVIRONNEMENT" textFill="#0d1b2a">
+                                            <content>
+                                                <StackPane>
+                                                    <children>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0">
+                                                            <children>
+                                                                <GridPane hgap="2.0" layoutX="20.0" layoutY="20.0" prefHeight="217.0" prefWidth="255.0" style="-fx-padding: 5;" vgap="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="10.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="Hôte :" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="OS :" GridPane.rowIndex="1" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="CPU :" GridPane.rowIndex="2" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="Cœurs :" GridPane.rowIndex="3" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="RAM :" GridPane.rowIndex="4" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="Swap :" GridPane.rowIndex="5" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="Disque :" GridPane.rowIndex="6" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="Utilisation :" GridPane.rowIndex="7" />
+                                                                        <Label fx:id="hote_environnement" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" />
+                                                                        <Label fx:id="os_environnement" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Label fx:id="cpu_environnement" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Label fx:id="coeur_environnement" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                        <Label fx:id="ram_environnement" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                        <Label fx:id="swap_environnement" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                        <Label fx:id="disque_environnement" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                        <Label fx:id="utilisateur_environnement" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                                    </children>
+                                                                </GridPane>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <FontIcon fill="#d4af37" iconLiteral="fas-database" iconSize="150" mouseTransparent="true" opacity="0.2" />
+                                                    </children>
+                                                </StackPane>
+                                            </content>
+                                            <font>
+                                                <Font name="Segoe UI" size="13.0" />
+                                            </font>
+                                        </TitledPane>
+                                        <TitledPane animated="false" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="260.0" prefWidth="269.0" styleClass="fondRight1" stylesheets="@styleDashboard.css" text="BASE ORACLE" textFill="#0d1b2a">
+                                            <content>
+                                                <StackPane>
+                                                    <children>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                            <children>
+                                                                <GridPane hgap="2.0" prefHeight="217.0" prefWidth="255.0" style="-fx-padding: 5;" vgap="4.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                                    <columnConstraints>
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="15.0" />
+                                                                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                                    </columnConstraints>
+                                                                    <rowConstraints>
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                                    </rowConstraints>
+                                                                    <children>
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="Version :" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="Statut :" GridPane.rowIndex="1" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="Uptime :" GridPane.rowIndex="2" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="SID :" GridPane.rowIndex="3" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="Archive Log :" GridPane.rowIndex="4" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="Taille :" GridPane.rowIndex="5" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="Tablespace :" GridPane.rowIndex="6" />
+                                                                        <Label styleClass="colLabel1_Right1" stylesheets="@styleDashboard.css" text="Sessions :" GridPane.rowIndex="7" />
+                                                                        <Label text="Etat AWR :" GridPane.rowIndex="8" />
+                                                                        <Label fx:id="version_oracle" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" />
+                                                                        <Label fx:id="statut_oracle" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                                                        <Label fx:id="uptime_oracle" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                                                        <Label fx:id="sid_oracle" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                                                        <Label fx:id="statutArchiveLog_oracle" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                                                        <Label fx:id="taille_oracle" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                                                        <Label fx:id="tablespace_oracle" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                                                        <Label fx:id="session_oracle" styleClass="colLabel2_Right1" stylesheets="@styleDashboard.css" text="Label" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                                                        <Label fx:id="etatAWR_oracle" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                                                    </children>
+                                                                </GridPane>
+                                                            </children>
+                                                        </AnchorPane>
+                                                        <FontIcon fill="#d4af37" iconLiteral="fas-database" iconSize="150" mouseTransparent="true" opacity="0.2" />
+                                                    </children>
+                                                </StackPane>
+                                            </content>
+                                            <opaqueInsets>
+                                                <Insets />
+                                            </opaqueInsets>
+                                            <font>
+                                                <Font name="Segoe UI" size="13.0" />
+                                            </font>
+                                        </TitledPane>
+                                    </children>
+                                </VBox>
+                            </items>
+                        </SplitPane>
+                    </right>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

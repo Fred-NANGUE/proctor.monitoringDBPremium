@@ -1,0 +1,38 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 25 juin 2026, 02:20:37
+    Author     : fredm
+*/
+.labelTitreFormulaire{
+    -fx-text-fill:  #0D1B2A;
+    -fx-font-size : 22px;
+    -fx-font-weight: bold;
+    -fx-font-family: Arial;
+}
+.labelFormulaire{
+    -fx-text-fill:  #0D1B2A;
+    -fx-font-size : 13px;
+    -fx-font-weight: bold;
+}
+.zoneTexteField{
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    }
+.zoneTexteField:focused{
+    -fx-focus-color: #D4AF37;          /* Or */
+    -fx-faint-focus-color: #D4AF3744;  /* Or très transparent */
+    -fx-border-color: #D4AF37;
+
+}
+.buttonFormulaire{
+    -fx-background-color:  #0D1B2A;
+    -fx-text-fill :  #D4AF37;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-effect:  dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 0, 2);
+}

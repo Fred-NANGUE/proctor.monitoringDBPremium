@@ -1,0 +1,384 @@
+/* Style du titre */
+
+.fondTop{
+    -fx-background-color: linear-gradient(to right, #0a1628, #1a2a4a);
+    -fx-padding: 15 30 15 30;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.4), 10, 0, 0, 2);
+}
+.txt1Top{
+    -fx-text-fill: #D4AF37;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-font-family: Arial;
+}
+.txt2Top{
+    -fx-text-fill: #7A8A9A;
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+}
+.heureTop{
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Courier New';
+}
+.dateTop{
+    -fx-text-fill: #7A8A9A;
+    -fx-font-size: 11px;
+}
+.buttonTop { /* Créez cette classe ou appliquez en inline */
+    -fx-background-color: transparent;
+    -fx-border-color: #dfb249; /* Votre couleur Or */
+    -fx-text-fill: #dfb249;
+}
+.buttonTop:hover {
+    -fx-background-color: #dfb249;
+    -fx-text-fill: #111e38;
+}
+.buttoncloche{
+    -fx-background-color: transparent;
+    -fx-text-fill: #D4AF37;
+    -fx-font-size: 18px;
+    -fx-cursor: hand;
+    -fx-padding: 5 10 5 10;
+    -fx-min-width: 40;
+    -fx-min-height: 40;
+    -fx-alignment: center;
+    -fx-background-radius: 20;
+}
+.buttoncloche:hover{
+    -fx-background-color: rgba(212, 175, 55, 0.15);
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.3), 8, 0, 0, 0);
+}
+.labelClocheButton{
+    -fx-background-color: #E74C3C;
+    -fx-text-fill: white;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 12;
+    -fx-min-width: 20px;
+    -fx-min-height: 20px;
+    -fx-alignment: center;
+    -fx-padding: 1 5 1 5;
+    -fx-effect: dropshadow(three-pass-box, rgba(231, 76, 60, 0.4), 4, 0, 0, 0);
+    -fx-border-color: white;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 12;
+    -fx-translate-x: 12px;
+    -fx-translate-y: -12px;
+}
+
+/* Style Right */
+
+.styleCahceDeployRight{
+    -fx-background-color: transparent;
+    -fx-text-fill: #D4AF37;
+    -fx-font-weight: 600;
+    -fx-font-size: 12px;
+    -fx-padding: 2;
+    -fx-background-radius: 6;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 6;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.2), 8, 0, 0, 0);
+}
+
+.fondRight{
+    -fx-background-color: #f0f2f5;
+    -fx-padding: 5;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), -6, 0, 0, 0);
+}
+.fondRight1{
+    -fx-background-color: white;
+    -fx-border-color: transparent;
+    -fx-background-radius: 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 8, 0, 0, 2);
+    -fx-padding: 5;
+}
+.colLabel1_Right1{
+    -fx-font-weight: 600;
+    -fx-text-fill: #0D1B2A;
+    -fx-font-size: 12px;
+}
+.colLabel2_Right1{
+    -fx-text-fill: #2C3E50;
+    -fx-font-size: 12px;
+    -fx-font-weight: 400;
+}
+
+/*  Style Bottom */
+.Bottom{
+    -fx-background-color: #0D1B2A;
+}
+.text1Bottom{
+    -fx-text-fill: #D4AF37;
+    -fx-font-size: 11px;
+    -fx-font-style: italic;
+}
+.text2Bottom{
+    -fx-text-fill: #7A8A9A;
+    -fx-font-size: 11px;
+}
+
+/* Styler Left */
+
+/* ========== CONTENEUR DU MENU ========== */
+.menu-pane {
+    -fx-background-color: linear-gradient(to bottom, #0a1628, #162238);
+    -fx-padding: 15 10 20 10;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 8, 0, 2, 0);
+}
+
+/* ========== TITRE "MENU" ========== */
+.menu-title {
+    -fx-text-fill: #D4AF37;
+    -fx-font-size: 18px;
+    -fx-font-weight: 700;
+    -fx-letter-spacing: 2px;
+    -fx-padding: 0 0 10 10;
+    -fx-text-transform: uppercase;
+}
+
+/* ========== BOUTON PRINCIPAL (Tableau de Bord) ========== */
+.menu-btn-primary {
+    -fx-background-color: transparent;
+    -fx-text-fill: #D4AF37;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-padding: 10 15 10 15;
+    -fx-background-radius: 6;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 3;
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.1), 4, 0, 0, 0);
+}
+
+.menu-btn-primary:hover {
+    -fx-background-color: rgba(212, 175, 55, 0.12);
+    -fx-border-color: #D4AF37;
+}
+
+.menu-btn-primary:selected {
+    -fx-background-color: rgba(212, 175, 55, 0.18);
+    -fx-text-fill: #F5D76E;
+    -fx-border-color: #D4AF37;
+}
+
+/* ========== CATÉGORIES (TitledPane) ========== */
+.menu-category {
+    -fx-background-color: transparent;
+    -fx-text-fill: #a0b4c8;
+    -fx-font-size: 13px;
+    -fx-font-weight: 700;
+    -fx-padding: 5 0 2 0;
+    -fx-border-color: transparent;
+}
+
+.menu-category > .title {
+    -fx-background-color: transparent;
+    -fx-text-fill: #a0b4c8;
+    -fx-font-weight: 700;
+    -fx-padding: 8 10 8 10;
+    -fx-cursor: hand;
+}
+
+.menu-category > .title > .arrow {
+    -fx-background-color: #D4AF37;
+    -fx-shape: "M4,4 L10,10 L16,4 L14,2 L10,6 L6,2 Z";
+}
+
+.menu-category > .title:hover {
+    -fx-background-color: rgba(212, 175, 55, 0.08);
+    -fx-text-fill: #D4AF37;
+}
+
+.menu-category > .content {
+    -fx-background-color: transparent;
+    -fx-padding: 2 0 2 15;
+}
+
+/* ========== SOUS-BOUTONS ========== */
+.submenu-btn {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8898AA;
+    -fx-font-size: 12px;
+    -fx-font-weight: 400;
+    -fx-padding: 8 15 8 20;
+    -fx-background-radius: 4;
+    -fx-cursor: hand;
+    -fx-alignment: CENTER_LEFT;
+    -fx-border-color: transparent;
+    -fx-border-width: 0 0 0 2;
+}
+
+.submenu-btn:hover {
+    -fx-background-color: rgba(212, 175, 55, 0.08);
+    -fx-text-fill: #D4AF37;
+    -fx-border-color: #D4AF37;
+}
+
+.submenu-btn:selected {
+    -fx-background-color: rgba(212, 175, 55, 0.12);
+    -fx-text-fill: #F5D76E;
+    -fx-border-color: #D4AF37;
+}
+
+.submenu-btn .graphic {
+    -fx-padding: 0 8 0 0;
+}
+
+.submenu-btn .text {
+    -fx-fill: #8898AA;
+}
+
+.submenu-btn:hover .text {
+    -fx-fill: #D4AF37;
+}
+
+.submenu-btn:selected .text {
+    -fx-fill: #F5D76E;
+}
+
+/* ========== COULEURS PAR CATÉGORIE ========== */
+/* SUPERVISION (Bleu) */
+.menu-category-supervision > .title {
+    -fx-text-fill: #3498DB;
+}
+.menu-category-supervision > .title:hover {
+    -fx-text-fill: #5DADE2;
+}
+
+/* SECURITE (Rouge/Orange) */
+.menu-category-securite > .title {
+    -fx-text-fill: #E74C3C;
+}
+.menu-category-securite > .title:hover {
+    -fx-text-fill: #EC7063;
+}
+
+/* ADMINISTRATION (Vert) */
+.menu-category-administration > .title {
+    -fx-text-fill: #27AE60;
+}
+.menu-category-administration > .title:hover {
+    -fx-text-fill: #52BE80;
+}
+
+/* ========== EFFET DE SURVOL GLOBAL ========== */
+.menu-pane .button:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(212, 175, 55, 0.2), 6, 0, 0, 0);
+}
+
+/* ========== SCROLLBAR PERSONNALISÉE ========== */
+.menu-pane .scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.menu-pane .scroll-bar .thumb {
+    -fx-background-color: #D4AF37;
+    -fx-background-radius: 5;
+}
+
+.menu-pane .scroll-bar .track {
+    -fx-background-color: transparent;
+}
+
+
+/* Style du tableau de bord*/
+
+.fondCenter{
+    -fx-background-color: #F4F6F9;
+    -fx-padding : 20;
+}
+/* Style global de la TableView (Fond bleu nuit profond et bords arrondis) */
+.table-view {
+    -fx-background-color: #111e38; /* Correspond à votre fond sombre */
+    -fx-background-radius: 10px;    /* Arrondit les angles de la table */
+    -fx-border-radius: 10px;
+    -fx-border-color: #1d2c4d;       /* Bordure fine subtile */
+    -fx-border-width: 1px;
+    -fx-padding: 0;
+}
+
+/* Supprime les bordures internes blanches par défaut de JavaFX */
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+
+/* Supprime la bande grise/blanche tout à droite de l'en-tête (Le filler) */
+.table-view .column-header-background .filler {
+    -fx-background-color: #0b1326; /* Bleu très foncé pour l'en-tête */
+}
+
+/* Conteneur principal de l'en-tête */
+.table-view .column-header-background {
+    -fx-background-color: #0b1326;
+    -fx-background-radius: 10px 10px 0 0; /* Arrondit uniquement le haut */
+    -fx-padding: 0;
+}
+
+/* Style de chaque colonne d'en-tête */
+.table-view .column-header {
+    -fx-background-color: transparent; /* Supprime le dégradé gris brillant */
+    -fx-size: 40px;                     /* Donne une belle hauteur moderne */
+    -fx-border-color: #1d2c4d;
+    -fx-border-width: 0 1px 1px 0;       /* Séparateurs fins entre colonnes */
+}
+
+/* Style du texte des en-têtes (ID, NOM UTILISATEUR, etc.) */
+.table-view .column-header .label {
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 12px;
+}
+
+/* Style de la flèche de tri (Petite icône à côté de ID) */
+.table-view .column-header .sort-order-dot, 
+.table-view .column-header .arrow {
+    -fx-background-color: #ffffff;
+}
+
+/* Style des cellules de données (Pour quand vous chargerez vos utilisateurs) */
+.table-cell {
+    -fx-padding: 10px;
+    -fx-text-fill: #e2e8f0;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 13px;
+    -fx-border-color: #1d2c4d;
+    -fx-border-width: 0 0 1px 0; /* Uniquement une ligne horizontale sous chaque ligne */
+    -fx-alignment: center-left;
+}
+
+/* Alternance des lignes pour une meilleure lisibilité */
+.table-row-cell:odd {
+    -fx-background-color: #111e38;
+}
+.table-row-cell:even {
+    -fx-background-color: #162444; /* Légèrement plus clair */
+}
+
+/* Style au survol d'une ligne */
+.table-row-cell:hover {
+    -fx-background-color: #1f3159;
+}
+
+/* Style de la ligne sélectionnée */
+.table-row-cell:selected {
+    -fx-background-color: #2b457d;
+}
+
+/* Personnalisation du message de table vide */
+.table-view .placeholder .label {
+    -fx-text-fill: #64748b;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+}
+
+.lueurUser:focused {
+    -fx-focus-color: #D4AF37;          /* Or */
+    -fx-faint-focus-color: #D4AF3744;  /* Or transparent pour le glow */
+    -fx-border-color: #D4AF37;
+}

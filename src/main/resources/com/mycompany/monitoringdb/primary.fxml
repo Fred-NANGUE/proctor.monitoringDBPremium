@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<HBox alignment="CENTER" prefHeight="560.0" prefWidth="900.0" style="-fx-background-color: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.15), 15, 0, 0, 0); -fx-background-color: 10; -fx-border-radius: 10;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.monitoringdb.PrimaryController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="560.0" prefWidth="350.0" style="-fx-background-color: #0D1B2A; -fx-padding: 40 30 40 30;">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="8.0" style="-fx-padding: 20 0 20 0;">
+               <children>
+                  <FontIcon fill="#d4af37" iconLiteral="fas-database" iconSize="56" />
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <FontIcon fill="#d4af37" iconLiteral="fas-circle" />
+                        <FontIcon fill="#d4af37" iconLiteral="fas-circle" />
+                        <FontIcon fill="#d4af37" iconLiteral="fas-circle" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label style="-fx-text-fill: white; -fx-font-size: 26; -fx-font-weight: bold; -fx-font-family: Arial;" text="MONITORING">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Label>
+            <Label style="-fx-text-fill: #D4AF37; -fx-font-size: 22; -fx-font-weight: bold; -fx-font-family: Arial;" text="DB PREMIUM" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="8.0">
+               <children>
+                  <FontIcon fill="#d4af37" iconLiteral="fas-minus" iconSize="14" />
+                  <FontIcon fill="#d4af37" iconLiteral="fas-minus" iconSize="14" />
+                  <FontIcon fill="#d4af37" iconLiteral="fas-crown" iconSize="14" />
+                  <FontIcon fill="#d4af37" iconLiteral="fas-minus" iconSize="14" />
+                  <FontIcon fill="#d4af37" iconLiteral="fas-minus" iconSize="14" />
+               </children>
+            </HBox>
+            <Label style="-fx-text-fill: #A0B0C0; -fx-font-size: 13; -fx-font-style: italic;" text="Version 1.0" />
+            <Label maxWidth="280.0" prefHeight="98.0" prefWidth="280.0" style="-fx-text-fill: #C0D0E0; -fx-font-size: 13; -fx-line-spacing: 4;" text="Solution de supervision des bases de données Oracle 19c. Développée dans le cadre du stage à Africa Golden Bank." textAlignment="CENTER" wrapText="true" />
+            <VBox minHeight="0.0" prefHeight="0.0" prefWidth="100.0" VBox.vgrow="ALWAYS" />
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="5.0" style="-fx-padding: 40 0 0 0;">
+               <children>
+                  <FontIcon fill="#d4af37" iconLiteral="fas-star" iconSize="12" />
+                  <Label style="-fx-text-fill: #D4AF37; -fx-font-size: 14; -fx-font-weight: bold;" text="Design By Fred Nangue" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox alignment="CENTER" prefHeight="560.0" prefWidth="550.0" spacing="20.0" style="-fx-background-color: white; -fx-padding: 30 50 30 50;">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <FontIcon fill="#0d1b2a" iconLiteral="fas-lock" iconSize="20" />
+                  <Label styleClass="labelTitreFormulaire" stylesheets="@styleLogin.css" text="Connexion à la base de données" />
+               </children>
+            </HBox>
+            <GridPane alignment="CENTER" hgap="15.0" vgap="15.0">
+               <columnConstraints>
+                  <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="130.0" prefWidth="100.0" />
+                  <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="240.0" prefWidth="100.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="8.0">
+                     <children>
+                        <FontIcon fill="#0d1b2a" iconLiteral="fas-server" iconSize="14" />
+                        <Label styleClass="labelFormulaire" stylesheets="@styleLogin.css" text="Adresse IP SSH :" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="ipsshField" prefHeight="35.0" promptText="ex: 192.168.56.101" styleClass="zoneTexteField" stylesheets="@styleLogin.css" GridPane.columnIndex="1" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.rowIndex="1">
+                     <children>
+                        <FontIcon fill="#0d1b2a" iconLiteral="fas-plug" iconSize="14" />
+                        <Label styleClass="labelFormulaire" stylesheets="@styleLogin.css" text="Port SSH :" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="portsshField" prefHeight="35.0" styleClass="zoneTexteField" stylesheets="@styleLogin.css" text="22" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.rowIndex="6">
+                     <children>
+                        <FontIcon fill="#0d1b2a" iconLiteral="fas-layer-group" iconSize="14" />
+                        <Label styleClass="labelFormulaire" stylesheets="@styleLogin.css" text="Nom de Service :" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="serviceField" editable="false" prefHeight="35.0" promptText="ex: ORCL2" styleClass="zoneTexteField" stylesheets="@styleLogin.css" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.rowIndex="2">
+                     <children>
+                        <FontIcon fill="#0d1b2a" iconLiteral="fas-user" iconSize="14" />
+                        <Label styleClass="labelFormulaire" stylesheets="@styleLogin.css" text="Utilisateur SSH :" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="usersshField" prefHeight="35.0" promptText="ex: oracle" styleClass="zoneTexteField" stylesheets="@styleLogin.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.rowIndex="3">
+                     <children>
+                        <FontIcon fill="#0d1b2a" iconLiteral="fas-key" iconSize="14" />
+                        <Label styleClass="labelFormulaire" stylesheets="@styleLogin.css" text="Mot de passe SSH :" />
+                     </children>
+                  </HBox>
+                  <PasswordField fx:id="passwordsshField" prefHeight="35.0" styleClass="zoneTexteField" stylesheets="@styleLogin.css" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Button fx:id="connectsshButton" alignment="CENTER" mnemonicParsing="false" onAction="#handleTestSSH" prefHeight="30.0" prefWidth="200.0" styleClass="buttonFormulaire" stylesheets="@styleLogin.css" text="Test Connectivité..." GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="4">
+                     <graphic>
+                        <FontIcon fill="#d4af37" iconLiteral="fas-network-wired" iconSize="14" />
+                     </graphic>
+                  </Button>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.rowIndex="7">
+                     <children>
+                        <FontIcon fill="#0d1b2a" iconLiteral="fas-ethernet" iconSize="15" />
+                        <Label styleClass="labelFormulaire" stylesheets="@styleLogin.css" text="Port Oracle :" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="portoracleField" editable="false" prefHeight="35.0" styleClass="zoneTexteField" stylesheets="@styleLogin.css" text="1521" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.rowIndex="8">
+                     <children>
+                        <FontIcon fill="#0d1b2a" iconLiteral="fas-user-shield" iconSize="14" />
+                        <Label styleClass="labelFormulaire" stylesheets="@styleLogin.css" text="Utilisateur BD :" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="useroracleField" editable="false" prefHeight="35.0" promptText="ex: SYSTEM" styleClass="zoneTexteField" stylesheets="@styleLogin.css" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.rowIndex="9">
+                     <children>
+                        <FontIcon fill="#0d1b2a" iconLiteral="fas-key" iconSize="14" />
+                        <Label styleClass="labelFormulaire" stylesheets="@styleLogin.css" text="Mot de passe DB" />
+                     </children>
+                  </HBox>
+                  <PasswordField fx:id="passwordoracleField" editable="false" prefHeight="35.0" styleClass="zoneTexteField" stylesheets="@styleLogin.css" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="8.0" GridPane.rowIndex="5">
+                     <children>
+                        <FontIcon fill="#0d1b2a" iconLiteral="fas-server" iconSize="14" />
+                        <Label styleClass="labelFormulaire" stylesheets="@styleLogin.css" text="Adresse IP BD :" />
+                     </children>
+                  </HBox>
+                  <TextField fx:id="iporacleField" alignment="TOP_LEFT" editable="false" prefHeight="35.0" promptText="ex: 192.168.56.101" styleClass="zoneTexteField" stylesheets="@styleLogin.css" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               </children>
+            </GridPane>
+            <Label fx:id="statusConnexion" style="-fx-font-size: 13; -fx-font-weight: bold;" wrapText="true" />
+            <Button fx:id="loginButton" mnemonicParsing="false" onAction="#handleLogin" prefHeight="30.0" prefWidth="200.0" styleClass="buttonFormulaire" stylesheets="@styleLogin.css" text="Se connecter">
+               <graphic>
+                  <FontIcon fill="#d4af37" iconLiteral="fas-sign-in-alt" iconSize="16" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</HBox>

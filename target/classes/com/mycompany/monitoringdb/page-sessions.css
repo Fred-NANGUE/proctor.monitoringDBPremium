@@ -1,0 +1,92 @@
+.vboxCentral{
+    -fx-padding: 20;
+    -fx-background-color: #F4F6F9;
+}
+.titreCentral{
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #0D1B2A;
+    -fx-font-family: "Segoe UI", "Roboto", sans-serif;
+    -fx-letter-spacing: 1px;
+}
+.totalsessions{
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #0D1B2A;
+}
+.totalActif{
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #27AE60;
+}
+.totalInactif{
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-text-fill: #7A8A9A;
+}
+.buttonRafaichir{
+    -fx-background-color: transparent;
+    -fx-text-fill: #3498DB;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 6 20 6 20;
+    -fx-background-radius: 6;
+    -fx-border-color: #3498DB;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 6;
+}
+.buttonRafaichir:hover{
+    -fx-background-color: #3498DB;
+    -fx-text-fill: white;
+}
+.buttonExporter{
+    -fx-background-color: transparent;
+    -fx-text-fill: #27AE60;
+    -fx-font-weight: 600;
+    -fx-font-size: 13px;
+    -fx-cursor: hand;
+    -fx-padding: 6 20 6 20;
+    -fx-background-radius: 6;
+    -fx-border-color: #27AE60;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 6;
+}
+.buttonExporter:hover{
+    -fx-background-color: #27AE60;
+    -fx-text-fill: white;
+}
+.tableView{
+    -fx-border-color: #D4AF37;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.06), 8, 0, 0, 2);
+}
+
+/* ===== BOUTON VOIR POSITION ===== */
+.buttonPosition {
+    -fx-background-color: #0D1B2A;
+    -fx-text-fill: #D4AF37;
+    -fx-font-weight: bold;
+    -fx-padding: 8 20 8 20;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #D4AF37;
+    -fx-border-width: 1px;
+    -fx-cursor: hand;
+    -fx-font-size: 13px;
+}
+
+.buttonPosition:hover {
+    -fx-background-color: #1a2a3e;
+    -fx-effect: dropshadow(gaussian, rgba(212, 175, 55, 0.3), 10, 0, 0, 0);
+}
+
+.buttonPosition:pressed {
+    -fx-translate-y: 1px;
+}
+
+.buttonPosition:disabled {
+    -fx-opacity: 0.5;
+    -fx-cursor: default;
+}
